@@ -1,0 +1,48 @@
+{
+	"users": [
+		{
+			"email": "1@1.com",
+			"password": "$2a$10$w9/Wzu2P4ztK.gJS5YMPw./swfpT8Knc0ugZaEFPWID/JMRQP2Sga",
+			"name": "Name 1",
+			"id": "d79c3050-a7ac-431c-acb9-80b4a091e978"
+		},
+		{
+			"email": "2@2.com",
+			"password": "$2a$10$c9g0nKUuS0hyStVKz6j62uoJtxcn2mfnqXrQRVw9Scr1VQ8DbgNXi",
+			"name": "Name 2",
+			"id": "ffe4effa-32aa-4095-9dd1-e6c41946471d"
+		}
+	],
+	"tasks": [
+		{
+			"id": "1",
+			"task": "1",
+			"comment": "user 1",
+			"userId": "d79c3050-a7ac-431c-acb9-80b4a091e978"
+		},
+		{
+			"id": "2",
+			"task": "2",
+			"comment": "user 1",
+			"userId": "d79c3050-a7ac-431c-acb9-80b4a091e978"
+		},
+		{
+			"id": "3",
+			"task": "1",
+			"comment": "user 2",
+			"userId": "ffe4effa-32aa-4095-9dd1-e6c41946471d"
+		},
+		{
+			"id": "4",
+			"task": "2",
+			"comment": "user 2",
+			"userId": "ffe4effa-32aa-4095-9dd1-e6c41946471d"
+		},
+		{
+			"id": "5",
+			"task": "3",
+			"comment": "user 2",
+			"userId": "ffe4effa-32aa-4095-9dd1-e6c41946471d"
+		}
+	]
+}

@@ -1,0 +1,181 @@
+.toolbar {
+	padding: 1rem 2rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.logo {
+	width: 2rem;
+	height: 2rem;
+	background-image: url("../../assets/images/music.svg");
+	background-size: cover;
+	overflow: hidden;
+	text-indent: -9999px;
+}
+
+.button {
+	width: 100%;
+	background: transparent;
+	font: inherit;
+	font-weight: bold;
+	color: inherit;
+	padding: 0.35rem 1rem;
+	margin: 0 0 1rem;
+	transition: box-shadow var(--transition-t-f) ease,
+		background-color var(--transition-t-f) ease,
+		opacity var(--transition-t-f) ease;
+}
+
+@media (min-width: 40em) {
+	.button {
+		width: 16rem;
+	}
+}
+
+.button:disabled {
+	opacity: 0.5;
+}
+
+.button:focus,
+.button:active {
+	outline: none;
+	box-shadow: var(--controls-box-sh);
+	border-color: var(--outline-c);
+}
+
+.button:last-child {
+	margin: 0;
+}
+
+.toolbar,
+.button {
+	border: var(--border2);
+	border-radius: 0.25rem;
+}
+
+.toolbar,
+.button:hover {
+	background-color: var(--main-c);
+}
+
+.button--primary:hover {
+	background-color: var(--outline-c);
+}
+
+.button--null {
+	border: none;
+	font-weight: 400;
+	color: var(--main-c5);
+	text-decoration: underline;
+	animation: scaleAnim var(--transition-t-f) ease forwards;
+}
+
+.button--null:hover {
+	background-color: transparent;
+}
+
+.button--null:active {
+	text-decoration: none;
+}
+
+.button--ctrl {
+	position: relative;
+	padding: 0;
+	width: 2rem;
+	height: 2rem;
+	border: none;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	text-indent: -9999px;
+	line-height: 0.1;
+}
+
+.button--cross {
+	position: absolute;
+	top: 0.25rem;
+	right: 0.25rem;
+	border-radius: var(--border-r50);
+	background-image: url("../../assets/images/cross-rounded.svg");
+}
+
+@media (min-width: 40em) {
+	.button--cross {
+		top: 0;
+		right: -2.25rem;
+	}
+}
+
+.button--ctrl::after {
+	content: "";
+	display: block;
+	position: absolute;
+	top: -0.75rem;
+	left: -0.75rem;
+	right: -0.75rem;
+	bottom: -0.75rem;
+}
+
+.button--burger {
+	position: relative;
+	border-radius: var(--border-r);
+	background-image: url("../../assets/images/burger.svg");
+	background-size: 70%;
+	right: -0.25rem;
+}
+
+.modal-container {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	min-height: 100%;
+	z-index: 1000;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+.modal-wrapper {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100%;
+}
+
+.backdrop {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: var(--backdrop-c);
+	opacity: 0;
+	animation: opacityAnim var(--transition-t-f) ease forwards;
+	z-index: 0;
+}
+
+.modal {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	flex: 0 0 auto;
+	max-width: 18rem;
+	min-width: 0;
+	margin: 4rem auto;
+	padding: 1.75rem;
+	border-radius: var(--border-r);
+	background-color: var(--white-c);
+	z-index: 1;
+	will-change: transform;
+	animation: scaleAnim var(--transition-t-f) ease;
+}
+
+@media (min-width: 40em) {
+	.modal {
+		max-width: 40rem;
+		padding: 3rem 1.75rem;
+	}
+}

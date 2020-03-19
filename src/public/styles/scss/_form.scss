@@ -1,0 +1,61 @@
+.form {
+	--border-input: 1px solid var(--main-c2);
+	--outline: 0.25rem solid var(--outline-c);
+	width: 100%;
+	border: var(--border);
+	border-radius: var(--border-r);
+	padding: 1.75rem 1rem;
+	margin: 0 0 3rem;
+	font: inherit;
+}
+
+.form:last-child {
+	margin: 0 auto;
+}
+
+@media (min-width: 40em) {
+	.form {
+		width: 50%;
+		margin: 0 auto 5rem;
+	}
+}
+
+.form__field {
+	margin: 0 0 0.85rem;
+}
+
+.form__field:last-child {
+	margin: 0;
+}
+
+.form label {
+	display: inline-block;
+	margin: 0 0 0.5rem;
+	color: var(--main-c3);
+}
+
+.form button {
+	width: 100%;
+}
+
+.input {
+	color: var(--main-c3);
+	padding: 0.5rem 1rem;
+	border: var(--border-input);
+	transition: box-shadow var(--transition-t-f) ease,
+		border-color var(--transition-t-f) ease;
+}
+
+.input:focus {
+	border-color: var(--outline-c);
+	box-shadow: var(--controls-box-sh);
+}
+
+.input--invalid {
+	background-color: var(--invalid-bg);
+}
+
+.input--invalid:focus {
+	border-color: var(--invalid-c);
+	box-shadow: none;
+}

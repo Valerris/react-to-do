@@ -1,0 +1,33 @@
+:root {
+	--font-c: rgb(9, 9, 9);
+	--white-c: #f9f9f9;
+	--main-c: #e6e6e6;
+	--main-c2: #c4c4c4;
+	--main-c3: #999999;
+	--main-c4: #4b4c4c;
+	--main-c5: #3987ec;
+	--outline-c: #aecbf2;
+	--invalid-c: #f35757;
+	--backdrop-c: rgba(9, 9, 9, 0.75);
+	--invalid-bg: #ff9f9f4d;
+	--checked-bg: rgba(64, 240, 64, 0.25);
+	--line-h: 1.5rem;
+	--font-s: 1rem;
+	--border: 2px solid var(--main-c);
+	--border2: 1px solid var(--main-c);
+	--border-r: 0.25rem;
+	--border-r50: 50%;
+	--transition-t-f: 0.225s;
+	--transition-t-m: 0.325s;
+	--transition-t-s: 0.425s;
+	--controls-box-sh-w: 0.21875rem;
+	--controls-box-sh: 0 0 0 var(--controls-box-sh-w) var(--outline-c);
+	--controls-box-sh-invalid: 0 0 0 calc(var(--controls-box-sh-w) / 2.5)
+		var(--invalid-c);
+}
+
+@media (min-width: 40em) {
+	:root {
+		--line-h: 1.65rem;
+	}
+}
